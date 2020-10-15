@@ -39,17 +39,18 @@ public class MarsRover {
     }
 
     private void readSingleCommand(String command) throws CommandNotDefinedException {
-        if (command.equals(MOVE)) {
-            move();
-        }
-        else if (command.equals(LEFT)) {
-            turnLeft();
-        }
-        else if (command.equals(RIGHT)) {
-            turnRight();
-        }
-        else {
-            throw new CommandNotDefinedException("Command Not Defined.");
+        switch (command) {
+            case MOVE:
+                move();
+                break;
+            case LEFT:
+                turnLeft();
+                break;
+            case RIGHT:
+                turnRight();
+                break;
+            default:
+                throw new CommandNotDefinedException("Command Not Defined.");
         }
     }
 
