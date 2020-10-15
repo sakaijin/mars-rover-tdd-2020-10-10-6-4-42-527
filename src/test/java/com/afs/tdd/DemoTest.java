@@ -54,7 +54,7 @@ class DemoTest {
     void should_x_0_y_negative_1_S_when_executeCommand_M_given_x_0_y_0_S() {
         MarsRover marsRover = new MarsRover(0, 0, "S");
         CommandSplitter commandsSplit = new CommandSplitter();
-        marsRover.executeCommand(commandsSplit.splitCommands("R"));
+        marsRover.executeCommand(commandsSplit.splitCommands("M"));
 
         int xLocation = marsRover.getXLocation();
         int yLocation = marsRover.getYLocation();
