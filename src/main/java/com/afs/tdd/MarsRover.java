@@ -32,19 +32,24 @@ public class MarsRover {
         return direction;
     }
 
-    public void executeCommand(List<String> commands) {
-        commands.forEach(this::readSingleCommand);
+    public void executeCommand(List<String> commands) throws CommandNotDefinedException {
+        for (String command : commands) {
+            readSingleCommand(command);
+        }
     }
 
-    private void readSingleCommand(String command) {
+    private void readSingleCommand(String command) throws CommandNotDefinedException {
         if (command.equals(MOVE)) {
             move();
         }
-        if (command.equals(LEFT)) {
+        else if (command.equals(LEFT)) {
             turnLeft();
         }
-        if (command.equals(RIGHT)) {
+        else if (command.equals(RIGHT)) {
             turnRight();
+        }
+        else {
+            throw new CommandNotDefinedException("Command Not Defined.");
         }
     }
 
