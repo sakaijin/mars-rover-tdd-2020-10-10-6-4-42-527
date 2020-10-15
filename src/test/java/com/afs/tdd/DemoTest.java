@@ -7,8 +7,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class DemoTest {
     @Test
-    void should_x_0_y_1_N_when_commandsExecuted_M_given_x_0_y_0_N() {
+    void should_x_0_y_1_N_when_executeCommand_M_given_x_0_y_0_N() {
         MarsRover marsRover = new MarsRover(0,0,"N");
+        CommandSplitter commandsSplit = new CommandSplitter();
+        marsRover.executeCommand(commandsSplit.splitCommands("M"));
 
         int xLocation = marsRover.getXLocation();
         int yLocation = marsRover.getYLocation();
