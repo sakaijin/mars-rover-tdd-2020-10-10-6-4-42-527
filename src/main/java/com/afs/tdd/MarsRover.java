@@ -3,6 +3,10 @@ package com.afs.tdd;
 import java.util.List;
 
 public class MarsRover {
+    private static final String NORTH = "N";
+    private static final String MOVE = "M";
+    private static final String LEFT = "L";
+    private static final String RIGHT = "R";
     private int xLocation;
     private int yLocation;
     private String direction;
@@ -30,32 +34,36 @@ public class MarsRover {
     }
 
     private void readSingleCommand(String command) {
-        if (command.equals("M")) {
+        if (command.equals(MOVE)) {
             move();
         }
-        if (command.equals("L")){
+        if (command.equals(LEFT)) {
             turnLeft();
         }
-        if (command.equals("R")){
+        if (command.equals(RIGHT)) {
             turnRight();
         }
     }
 
     private void turnRight() {
-        if (direction.equals("N")){
+        if (isNorth()) {
             direction = "E";
         }
     }
 
     private void turnLeft() {
-        if (direction.equals("N")){
+        if (isNorth()) {
             direction = "W";
         }
     }
 
     private void move() {
-        if (direction.equals("N")) {
+        if (isNorth()) {
             yLocation++;
         }
+    }
+
+    private boolean isNorth() {
+        return direction.equals(NORTH);
     }
 }

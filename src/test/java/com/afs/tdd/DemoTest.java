@@ -1,6 +1,5 @@
 package com.afs.tdd;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -8,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class DemoTest {
     @Test
     void should_x_0_y_1_N_when_executeCommand_M_given_x_0_y_0_N() {
-        MarsRover marsRover = new MarsRover(0,0,"N");
+        MarsRover marsRover = new MarsRover(0, 0, "N");
         CommandSplitter commandsSplit = new CommandSplitter();
         marsRover.executeCommand(commandsSplit.splitCommands("M"));
 
@@ -23,7 +22,7 @@ class DemoTest {
 
     @Test
     void should_x_0_y_0_W_when_executeCommand_L_given_x_0_y_0_N() {
-        MarsRover marsRover = new MarsRover(0,0,"N");
+        MarsRover marsRover = new MarsRover(0, 0, "N");
         CommandSplitter commandsSplit = new CommandSplitter();
         marsRover.executeCommand(commandsSplit.splitCommands("L"));
 
@@ -38,7 +37,7 @@ class DemoTest {
 
     @Test
     void should_x_0_y_0_E_when_executeCommand_R_given_x_0_y_0_N() {
-        MarsRover marsRover = new MarsRover(0,0,"N");
+        MarsRover marsRover = new MarsRover(0, 0, "N");
         CommandSplitter commandsSplit = new CommandSplitter();
         marsRover.executeCommand(commandsSplit.splitCommands("R"));
 
