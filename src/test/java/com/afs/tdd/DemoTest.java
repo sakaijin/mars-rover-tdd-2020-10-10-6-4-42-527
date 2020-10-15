@@ -3,10 +3,11 @@ package com.afs.tdd;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class DemoTest {
     @Test
-    void should_x_0_y_1_N_when_executeCommand_M_given_x_0_y_0_N() {
+    void should_x_0_y_1_N_when_executeCommand_M_given_x_0_y_0_N() throws CommandNotDefinedException {
         MarsRover marsRover = new MarsRover(0, 0, "N");
         CommandSplitter commandsSplit = new CommandSplitter();
         marsRover.executeCommand(commandsSplit.splitCommands("M"));
@@ -21,7 +22,7 @@ class DemoTest {
     }
 
     @Test
-    void should_x_0_y_0_W_when_executeCommand_L_given_x_0_y_0_N() {
+    void should_x_0_y_0_W_when_executeCommand_L_given_x_0_y_0_N() throws CommandNotDefinedException {
         MarsRover marsRover = new MarsRover(0, 0, "N");
         CommandSplitter commandsSplit = new CommandSplitter();
         marsRover.executeCommand(commandsSplit.splitCommands("L"));
@@ -36,7 +37,7 @@ class DemoTest {
     }
 
     @Test
-    void should_x_0_y_0_E_when_executeCommand_R_given_x_0_y_0_N() {
+    void should_x_0_y_0_E_when_executeCommand_R_given_x_0_y_0_N() throws CommandNotDefinedException {
         MarsRover marsRover = new MarsRover(0, 0, "N");
         CommandSplitter commandsSplit = new CommandSplitter();
         marsRover.executeCommand(commandsSplit.splitCommands("R"));
@@ -51,7 +52,7 @@ class DemoTest {
     }
 
     @Test
-    void should_x_0_y_negative_1_S_when_executeCommand_M_given_x_0_y_0_S() {
+    void should_x_0_y_negative_1_S_when_executeCommand_M_given_x_0_y_0_S() throws CommandNotDefinedException {
         MarsRover marsRover = new MarsRover(0, 0, "S");
         CommandSplitter commandsSplit = new CommandSplitter();
         marsRover.executeCommand(commandsSplit.splitCommands("M"));
@@ -66,7 +67,7 @@ class DemoTest {
     }
 
     @Test
-    void should_x_0_y_0_E_when_executeCommand_L_given_x_0_y_0_S() {
+    void should_x_0_y_0_E_when_executeCommand_L_given_x_0_y_0_S() throws CommandNotDefinedException {
         MarsRover marsRover = new MarsRover(0, 0, "S");
         CommandSplitter commandsSplit = new CommandSplitter();
         marsRover.executeCommand(commandsSplit.splitCommands("L"));
@@ -81,7 +82,7 @@ class DemoTest {
     }
 
     @Test
-    void should_x_0_y_0_W_when_executeCommand_R_given_x_0_y_0_S() {
+    void should_x_0_y_0_W_when_executeCommand_R_given_x_0_y_0_S() throws CommandNotDefinedException {
         MarsRover marsRover = new MarsRover(0, 0, "S");
         CommandSplitter commandsSplit = new CommandSplitter();
         marsRover.executeCommand(commandsSplit.splitCommands("R"));
@@ -96,7 +97,7 @@ class DemoTest {
     }
 
     @Test
-    void should_x_1_y_0_E_when_executeCommand_M_given_x_0_y_0_E() {
+    void should_x_1_y_0_E_when_executeCommand_M_given_x_0_y_0_E() throws CommandNotDefinedException {
         MarsRover marsRover = new MarsRover(0, 0, "E");
         CommandSplitter commandsSplit = new CommandSplitter();
         marsRover.executeCommand(commandsSplit.splitCommands("M"));
@@ -111,7 +112,7 @@ class DemoTest {
     }
 
     @Test
-    void should_x_0_y_0_N_when_executeCommand_L_given_x_0_y_0_E() {
+    void should_x_0_y_0_N_when_executeCommand_L_given_x_0_y_0_E() throws CommandNotDefinedException {
         MarsRover marsRover = new MarsRover(0, 0, "E");
         CommandSplitter commandsSplit = new CommandSplitter();
         marsRover.executeCommand(commandsSplit.splitCommands("L"));
@@ -126,7 +127,7 @@ class DemoTest {
     }
 
     @Test
-    void should_x_0_y_0_S_when_executeCommand_R_given_x_0_y_0_E() {
+    void should_x_0_y_0_S_when_executeCommand_R_given_x_0_y_0_E() throws CommandNotDefinedException {
         MarsRover marsRover = new MarsRover(0, 0, "E");
         CommandSplitter commandsSplit = new CommandSplitter();
         marsRover.executeCommand(commandsSplit.splitCommands("R"));
@@ -141,7 +142,7 @@ class DemoTest {
     }
 
     @Test
-    void should_x_negative_1_y_0_W_when_executeCommand_M_given_x_0_y_0_W() {
+    void should_x_negative_1_y_0_W_when_executeCommand_M_given_x_0_y_0_W() throws CommandNotDefinedException {
         MarsRover marsRover = new MarsRover(0, 0, "W");
         CommandSplitter commandsSplit = new CommandSplitter();
         marsRover.executeCommand(commandsSplit.splitCommands("M"));
@@ -156,7 +157,7 @@ class DemoTest {
     }
 
     @Test
-    void should_x_0_y_0_S_when_executeCommand_L_given_x_0_y_0_W() {
+    void should_x_0_y_0_S_when_executeCommand_L_given_x_0_y_0_W() throws CommandNotDefinedException {
         MarsRover marsRover = new MarsRover(0, 0, "W");
         CommandSplitter commandsSplit = new CommandSplitter();
         marsRover.executeCommand(commandsSplit.splitCommands("L"));
@@ -171,7 +172,7 @@ class DemoTest {
     }
 
     @Test
-    void should_x_0_y_0_N_when_executeCommand_R_given_x_0_y_0_W() {
+    void should_x_0_y_0_N_when_executeCommand_R_given_x_0_y_0_W() throws CommandNotDefinedException {
         MarsRover marsRover = new MarsRover(0, 0, "W");
         CommandSplitter commandsSplit = new CommandSplitter();
         marsRover.executeCommand(commandsSplit.splitCommands("R"));
@@ -183,5 +184,14 @@ class DemoTest {
         assertEquals(0, xLocation);
         assertEquals(0, yLocation);
         assertEquals("N", direction);
+    }
+
+    @Test
+    void should_throwCommandNotDefinedException_when_executeCommand_F_given_x_0_y_0_N() {
+        MarsRover marsRover = new MarsRover(0, 0, "W");
+        CommandSplitter commandsSplit = new CommandSplitter();
+
+        assertThrows(CommandNotDefinedException.class, () -> {
+            marsRover.executeCommand(commandsSplit.splitCommands("F"));});
     }
 }
