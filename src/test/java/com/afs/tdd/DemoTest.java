@@ -194,4 +194,19 @@ class DemoTest {
         assertThrows(CommandNotDefinedException.class, () -> {
             marsRover.executeCommand(commandsSplit.splitCommands("F"));});
     }
+
+    @Test
+    void should_x_negative_1_y_1_N_when_executeCommand_MLMR_given_x_0_y_0_N() throws CommandNotDefinedException {
+        MarsRover marsRover = new MarsRover(0, 0, "N");
+        CommandSplitter commandsSplit = new CommandSplitter();
+        marsRover.executeCommand(commandsSplit.splitCommands("MLMR"));
+
+        int xLocation = marsRover.getXLocation();
+        int yLocation = marsRover.getYLocation();
+        String direction = marsRover.getDirection();
+
+        assertEquals(-1, xLocation);
+        assertEquals(1, yLocation);
+        assertEquals("N", direction);
+    }
 }
