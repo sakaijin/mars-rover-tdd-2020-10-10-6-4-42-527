@@ -15,9 +15,9 @@ class DemoTest {
         int yLocation = marsRover.getYLocation();
         String direction = marsRover.getDirection();
 
-        assertEquals(xLocation, 0);
-        assertEquals(yLocation, 1);
-        assertEquals(direction, "N");
+        assertEquals(0, xLocation);
+        assertEquals(1, yLocation);
+        assertEquals("N", direction);
     }
 
     @Test
@@ -30,9 +30,9 @@ class DemoTest {
         int yLocation = marsRover.getYLocation();
         String direction = marsRover.getDirection();
 
-        assertEquals(xLocation, 0);
-        assertEquals(yLocation, 0);
-        assertEquals(direction, "W");
+        assertEquals(0, xLocation);
+        assertEquals(0, yLocation);
+        assertEquals("W", direction);
     }
 
     @Test
@@ -45,9 +45,9 @@ class DemoTest {
         int yLocation = marsRover.getYLocation();
         String direction = marsRover.getDirection();
 
-        assertEquals(xLocation, 0);
-        assertEquals(yLocation, 0);
-        assertEquals(direction, "E");
+        assertEquals(0, xLocation);
+        assertEquals(0, yLocation);
+        assertEquals("E", direction);
     }
 
     @Test
@@ -60,9 +60,9 @@ class DemoTest {
         int yLocation = marsRover.getYLocation();
         String direction = marsRover.getDirection();
 
-        assertEquals(xLocation, 0);
-        assertEquals(yLocation, -1);
-        assertEquals(direction, "S");
+        assertEquals(0, xLocation);
+        assertEquals(-1, yLocation);
+        assertEquals("S", direction);
     }
 
     @Test
@@ -75,9 +75,9 @@ class DemoTest {
         int yLocation = marsRover.getYLocation();
         String direction = marsRover.getDirection();
 
-        assertEquals(xLocation, 0);
-        assertEquals(yLocation, 0);
-        assertEquals(direction, "E");
+        assertEquals(0, xLocation);
+        assertEquals(0, yLocation);
+        assertEquals("E", direction);
     }
 
     @Test
@@ -90,9 +90,9 @@ class DemoTest {
         int yLocation = marsRover.getYLocation();
         String direction = marsRover.getDirection();
 
-        assertEquals(xLocation, 0);
-        assertEquals(yLocation, 0);
-        assertEquals(direction, "W");
+        assertEquals(0, xLocation);
+        assertEquals(0, yLocation);
+        assertEquals("W", direction);
     }
 
 }
