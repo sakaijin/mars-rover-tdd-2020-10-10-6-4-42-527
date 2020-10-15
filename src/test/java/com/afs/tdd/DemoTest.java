@@ -36,5 +36,20 @@ class DemoTest {
         assertEquals(direction, "W");
     }
 
+    @Test
+    void should_x_0_y_0_E_when_executeCommand_R_given_x_0_y_0_N() {
+        MarsRover marsRover = new MarsRover(0,0,"N");
+        CommandSplitter commandsSplit = new CommandSplitter();
+        marsRover.executeCommand(commandsSplit.splitCommands("R"));
+
+        int xLocation = marsRover.getXLocation();
+        int yLocation = marsRover.getYLocation();
+        String direction = marsRover.getDirection();
+
+        assertEquals(xLocation, 0);
+        assertEquals(yLocation, 0);
+        assertEquals(direction, "E");
+    }
+
 
 }
