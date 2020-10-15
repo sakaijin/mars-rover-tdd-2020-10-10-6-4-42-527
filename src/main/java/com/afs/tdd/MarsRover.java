@@ -73,6 +73,9 @@ public class MarsRover {
         if (isSouth()){
             yLocation--;
         }
+        if (direction.equals(EAST)){
+            xLocation++;
+        }
     }
 
     private boolean isNorth() {
