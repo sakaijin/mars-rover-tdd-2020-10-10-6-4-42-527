@@ -152,7 +152,7 @@ class DemoTest {
 
         assertEquals(-1, xLocation);
         assertEquals(0, yLocation);
-        assertEquals("E", direction);
+        assertEquals("W", direction);
     }
 
 }
