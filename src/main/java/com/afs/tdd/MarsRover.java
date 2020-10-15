@@ -55,6 +55,9 @@ public class MarsRover {
         if (isNorth()) {
             direction = "W";
         }
+        if (direction.equals("S")){
+            direction = "E";
+        }
     }
 
     private void move() {
