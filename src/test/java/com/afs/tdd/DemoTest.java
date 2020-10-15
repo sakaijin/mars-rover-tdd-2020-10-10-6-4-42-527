@@ -81,7 +81,7 @@ class DemoTest {
     }
 
     @Test
-    void should_x_0_y_0_W_when_executeCommand_L_given_x_0_y_0_S() {
+    void should_x_0_y_0_W_when_executeCommand_R_given_x_0_y_0_S() {
         MarsRover marsRover = new MarsRover(0, 0, "S");
         CommandSplitter commandsSplit = new CommandSplitter();
         marsRover.executeCommand(commandsSplit.splitCommands("R"));
@@ -93,6 +93,21 @@ class DemoTest {
         assertEquals(0, xLocation);
         assertEquals(0, yLocation);
         assertEquals("W", direction);
+    }
+
+    @Test
+    void should_x_1_y_0_E_when_executeCommand_M_given_x_0_y_0_E() {
+        MarsRover marsRover = new MarsRover(0, 0, "E");
+        CommandSplitter commandsSplit = new CommandSplitter();
+        marsRover.executeCommand(commandsSplit.splitCommands("M"));
+
+        int xLocation = marsRover.getXLocation();
+        int yLocation = marsRover.getYLocation();
+        String direction = marsRover.getDirection();
+
+        assertEquals(1, xLocation);
+        assertEquals(0, yLocation);
+        assertEquals("E", direction);
     }
 
 }
