@@ -52,7 +52,7 @@ public class MarsRover {
         if (isNorth()) {
             direction = EAST;
         }
-        if (isSouth()){
+        else if (isSouth()){
             direction = WEST;
         }
     }
@@ -61,8 +61,11 @@ public class MarsRover {
         if (isNorth()) {
             direction = WEST;
         }
-        if (isSouth()){
+        else if (isSouth()){
             direction = EAST;
+        }
+        else if (direction.equals(EAST)){
+            direction = NORTH;
         }
     }
 
