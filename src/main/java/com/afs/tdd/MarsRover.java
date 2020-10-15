@@ -55,7 +55,7 @@ public class MarsRover {
         else if (isSouth()){
             direction = WEST;
         }
-        else if (direction.equals(EAST)){
+        else if (isEast()){
             direction = SOUTH;
         }
     }
@@ -67,7 +67,7 @@ public class MarsRover {
         else if (isSouth()){
             direction = EAST;
         }
-        else if (direction.equals(EAST)){
+        else if (isEast()){
             direction = NORTH;
         }
     }
@@ -79,7 +79,7 @@ public class MarsRover {
         if (isSouth()){
             yLocation--;
         }
-        if (direction.equals(EAST)){
+        if (isEast()){
             xLocation++;
         }
     }
@@ -90,5 +90,9 @@ public class MarsRover {
 
     private boolean isSouth() {
         return direction.equals(SOUTH);
+    }
+
+    private boolean isEast() {
+        return direction.equals(EAST);
     }
 }
