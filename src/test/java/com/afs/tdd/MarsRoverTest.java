@@ -5,16 +5,16 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-class MarsRoverTest {
+class ClientTest {
     @Test
-    void should_x_0_y_1_N_when_executeCommand_M_given_x_0_y_0_N() throws CommandNotDefinedException {
-        MarsRover marsRover = new MarsRover(0, 0, "N");
+    void should_x_0_y_1_N_when_enterCommands_M_given_x_0_y_0_N() throws CommandNotDefinedException {
+        Client client = new Client(0, 0, "N");
         CommandSplitter commandsSplit = new CommandSplitter();
-        marsRover.executeCommand(commandsSplit.splitCommands("M"));
+        client.enterCommands(commandsSplit.splitCommands("M"));
 
-        int xLocation = marsRover.getXLocation();
-        int yLocation = marsRover.getYLocation();
-        String direction = marsRover.getDirection();
+        int xLocation = client.getXLocation();
+        int yLocation = client.getYLocation();
+        String direction = client.getDirection();
 
         assertEquals(0, xLocation);
         assertEquals(1, yLocation);
@@ -22,14 +22,14 @@ class MarsRoverTest {
     }
 
     @Test
-    void should_x_0_y_0_W_when_executeCommand_L_given_x_0_y_0_N() throws CommandNotDefinedException {
-        MarsRover marsRover = new MarsRover(0, 0, "N");
+    void should_x_0_y_0_W_when_enterCommands_L_given_x_0_y_0_N() throws CommandNotDefinedException {
+        Client client = new Client(0, 0, "N");
         CommandSplitter commandsSplit = new CommandSplitter();
-        marsRover.executeCommand(commandsSplit.splitCommands("L"));
+        client.enterCommands(commandsSplit.splitCommands("L"));
 
-        int xLocation = marsRover.getXLocation();
-        int yLocation = marsRover.getYLocation();
-        String direction = marsRover.getDirection();
+        int xLocation = client.getXLocation();
+        int yLocation = client.getYLocation();
+        String direction = client.getDirection();
 
         assertEquals(0, xLocation);
         assertEquals(0, yLocation);
@@ -37,14 +37,14 @@ class MarsRoverTest {
     }
 
     @Test
-    void should_x_0_y_0_E_when_executeCommand_R_given_x_0_y_0_N() throws CommandNotDefinedException {
-        MarsRover marsRover = new MarsRover(0, 0, "N");
+    void should_x_0_y_0_E_when_enterCommands_R_given_x_0_y_0_N() throws CommandNotDefinedException {
+        Client client = new Client(0, 0, "N");
         CommandSplitter commandsSplit = new CommandSplitter();
-        marsRover.executeCommand(commandsSplit.splitCommands("R"));
+        client.enterCommands(commandsSplit.splitCommands("R"));
 
-        int xLocation = marsRover.getXLocation();
-        int yLocation = marsRover.getYLocation();
-        String direction = marsRover.getDirection();
+        int xLocation = client.getXLocation();
+        int yLocation = client.getYLocation();
+        String direction = client.getDirection();
 
         assertEquals(0, xLocation);
         assertEquals(0, yLocation);
@@ -52,14 +52,14 @@ class MarsRoverTest {
     }
 
     @Test
-    void should_x_0_y_negative_1_S_when_executeCommand_M_given_x_0_y_0_S() throws CommandNotDefinedException {
-        MarsRover marsRover = new MarsRover(0, 0, "S");
+    void should_x_0_y_negative_1_S_when_enterCommands_M_given_x_0_y_0_S() throws CommandNotDefinedException {
+        Client client = new Client(0, 0, "S");
         CommandSplitter commandsSplit = new CommandSplitter();
-        marsRover.executeCommand(commandsSplit.splitCommands("M"));
+        client.enterCommands(commandsSplit.splitCommands("M"));
 
-        int xLocation = marsRover.getXLocation();
-        int yLocation = marsRover.getYLocation();
-        String direction = marsRover.getDirection();
+        int xLocation = client.getXLocation();
+        int yLocation = client.getYLocation();
+        String direction = client.getDirection();
 
         assertEquals(0, xLocation);
         assertEquals(-1, yLocation);
@@ -67,14 +67,14 @@ class MarsRoverTest {
     }
 
     @Test
-    void should_x_0_y_0_E_when_executeCommand_L_given_x_0_y_0_S() throws CommandNotDefinedException {
-        MarsRover marsRover = new MarsRover(0, 0, "S");
+    void should_x_0_y_0_E_when_enterCommands_L_given_x_0_y_0_S() throws CommandNotDefinedException {
+        Client client = new Client(0, 0, "S");
         CommandSplitter commandsSplit = new CommandSplitter();
-        marsRover.executeCommand(commandsSplit.splitCommands("L"));
+        client.enterCommands(commandsSplit.splitCommands("L"));
 
-        int xLocation = marsRover.getXLocation();
-        int yLocation = marsRover.getYLocation();
-        String direction = marsRover.getDirection();
+        int xLocation = client.getXLocation();
+        int yLocation = client.getYLocation();
+        String direction = client.getDirection();
 
         assertEquals(0, xLocation);
         assertEquals(0, yLocation);
@@ -82,14 +82,14 @@ class MarsRoverTest {
     }
 
     @Test
-    void should_x_0_y_0_W_when_executeCommand_R_given_x_0_y_0_S() throws CommandNotDefinedException {
-        MarsRover marsRover = new MarsRover(0, 0, "S");
+    void should_x_0_y_0_W_when_enterCommands_R_given_x_0_y_0_S() throws CommandNotDefinedException {
+        Client client = new Client(0, 0, "S");
         CommandSplitter commandsSplit = new CommandSplitter();
-        marsRover.executeCommand(commandsSplit.splitCommands("R"));
+        client.enterCommands(commandsSplit.splitCommands("R"));
 
-        int xLocation = marsRover.getXLocation();
-        int yLocation = marsRover.getYLocation();
-        String direction = marsRover.getDirection();
+        int xLocation = client.getXLocation();
+        int yLocation = client.getYLocation();
+        String direction = client.getDirection();
 
         assertEquals(0, xLocation);
         assertEquals(0, yLocation);
@@ -97,14 +97,14 @@ class MarsRoverTest {
     }
 
     @Test
-    void should_x_1_y_0_E_when_executeCommand_M_given_x_0_y_0_E() throws CommandNotDefinedException {
-        MarsRover marsRover = new MarsRover(0, 0, "E");
+    void should_x_1_y_0_E_when_enterCommands_M_given_x_0_y_0_E() throws CommandNotDefinedException {
+        Client client = new Client(0, 0, "E");
         CommandSplitter commandsSplit = new CommandSplitter();
-        marsRover.executeCommand(commandsSplit.splitCommands("M"));
+        client.enterCommands(commandsSplit.splitCommands("M"));
 
-        int xLocation = marsRover.getXLocation();
-        int yLocation = marsRover.getYLocation();
-        String direction = marsRover.getDirection();
+        int xLocation = client.getXLocation();
+        int yLocation = client.getYLocation();
+        String direction = client.getDirection();
 
         assertEquals(1, xLocation);
         assertEquals(0, yLocation);
@@ -112,14 +112,14 @@ class MarsRoverTest {
     }
 
     @Test
-    void should_x_0_y_0_N_when_executeCommand_L_given_x_0_y_0_E() throws CommandNotDefinedException {
-        MarsRover marsRover = new MarsRover(0, 0, "E");
+    void should_x_0_y_0_N_when_enterCommands_L_given_x_0_y_0_E() throws CommandNotDefinedException {
+        Client client = new Client(0, 0, "E");
         CommandSplitter commandsSplit = new CommandSplitter();
-        marsRover.executeCommand(commandsSplit.splitCommands("L"));
+        client.enterCommands(commandsSplit.splitCommands("L"));
 
-        int xLocation = marsRover.getXLocation();
-        int yLocation = marsRover.getYLocation();
-        String direction = marsRover.getDirection();
+        int xLocation = client.getXLocation();
+        int yLocation = client.getYLocation();
+        String direction = client.getDirection();
 
         assertEquals(0, xLocation);
         assertEquals(0, yLocation);
@@ -127,14 +127,14 @@ class MarsRoverTest {
     }
 
     @Test
-    void should_x_0_y_0_S_when_executeCommand_R_given_x_0_y_0_E() throws CommandNotDefinedException {
-        MarsRover marsRover = new MarsRover(0, 0, "E");
+    void should_x_0_y_0_S_when_enterCommands_R_given_x_0_y_0_E() throws CommandNotDefinedException {
+        Client client = new Client(0, 0, "E");
         CommandSplitter commandsSplit = new CommandSplitter();
-        marsRover.executeCommand(commandsSplit.splitCommands("R"));
+        client.enterCommands(commandsSplit.splitCommands("R"));
 
-        int xLocation = marsRover.getXLocation();
-        int yLocation = marsRover.getYLocation();
-        String direction = marsRover.getDirection();
+        int xLocation = client.getXLocation();
+        int yLocation = client.getYLocation();
+        String direction = client.getDirection();
 
         assertEquals(0, xLocation);
         assertEquals(0, yLocation);
@@ -142,14 +142,14 @@ class MarsRoverTest {
     }
 
     @Test
-    void should_x_negative_1_y_0_W_when_executeCommand_M_given_x_0_y_0_W() throws CommandNotDefinedException {
-        MarsRover marsRover = new MarsRover(0, 0, "W");
+    void should_x_negative_1_y_0_W_when_enterCommands_M_given_x_0_y_0_W() throws CommandNotDefinedException {
+        Client client = new Client(0, 0, "W");
         CommandSplitter commandsSplit = new CommandSplitter();
-        marsRover.executeCommand(commandsSplit.splitCommands("M"));
+        client.enterCommands(commandsSplit.splitCommands("M"));
 
-        int xLocation = marsRover.getXLocation();
-        int yLocation = marsRover.getYLocation();
-        String direction = marsRover.getDirection();
+        int xLocation = client.getXLocation();
+        int yLocation = client.getYLocation();
+        String direction = client.getDirection();
 
         assertEquals(-1, xLocation);
         assertEquals(0, yLocation);
@@ -157,14 +157,14 @@ class MarsRoverTest {
     }
 
     @Test
-    void should_x_0_y_0_S_when_executeCommand_L_given_x_0_y_0_W() throws CommandNotDefinedException {
-        MarsRover marsRover = new MarsRover(0, 0, "W");
+    void should_x_0_y_0_S_when_enterCommands_L_given_x_0_y_0_W() throws CommandNotDefinedException {
+        Client client = new Client(0, 0, "W");
         CommandSplitter commandsSplit = new CommandSplitter();
-        marsRover.executeCommand(commandsSplit.splitCommands("L"));
+        client.enterCommands(commandsSplit.splitCommands("L"));
 
-        int xLocation = marsRover.getXLocation();
-        int yLocation = marsRover.getYLocation();
-        String direction = marsRover.getDirection();
+        int xLocation = client.getXLocation();
+        int yLocation = client.getYLocation();
+        String direction = client.getDirection();
 
         assertEquals(0, xLocation);
         assertEquals(0, yLocation);
@@ -172,14 +172,14 @@ class MarsRoverTest {
     }
 
     @Test
-    void should_x_0_y_0_N_when_executeCommand_R_given_x_0_y_0_W() throws CommandNotDefinedException {
-        MarsRover marsRover = new MarsRover(0, 0, "W");
+    void should_x_0_y_0_N_when_enterCommands_R_given_x_0_y_0_W() throws CommandNotDefinedException {
+        Client client = new Client(0, 0, "W");
         CommandSplitter commandsSplit = new CommandSplitter();
-        marsRover.executeCommand(commandsSplit.splitCommands("R"));
+        client.enterCommands(commandsSplit.splitCommands("R"));
 
-        int xLocation = marsRover.getXLocation();
-        int yLocation = marsRover.getYLocation();
-        String direction = marsRover.getDirection();
+        int xLocation = client.getXLocation();
+        int yLocation = client.getYLocation();
+        String direction = client.getDirection();
 
         assertEquals(0, xLocation);
         assertEquals(0, yLocation);
@@ -187,22 +187,22 @@ class MarsRoverTest {
     }
 
     @Test
-    void should_throwCommandNotDefinedException_when_executeCommand_F_given_x_0_y_0_N() {
-        MarsRover marsRover = new MarsRover(0, 0, "W");
+    void should_throwCommandNotDefinedException_when_enterCommands_F_given_x_0_y_0_N() {
+        Client client = new Client(0, 0, "W");
         CommandSplitter commandsSplit = new CommandSplitter();
 
-        assertThrows(CommandNotDefinedException.class, () -> marsRover.executeCommand(commandsSplit.splitCommands("F")));
+        assertThrows(CommandNotDefinedException.class, () -> client.enterCommands(commandsSplit.splitCommands("F")));
     }
 
     @Test
-    void should_x_negative_1_y_1_N_when_executeCommand_MLMR_given_x_0_y_0_N() throws CommandNotDefinedException {
-        MarsRover marsRover = new MarsRover(0, 0, "N");
+    void should_x_negative_1_y_1_N_when_enterCommands_MLMR_given_x_0_y_0_N() throws CommandNotDefinedException {
+        Client client = new Client(0, 0, "N");
         CommandSplitter commandsSplit = new CommandSplitter();
-        marsRover.executeCommand(commandsSplit.splitCommands("MLMR"));
+        client.enterCommands(commandsSplit.splitCommands("MLMR"));
 
-        int xLocation = marsRover.getXLocation();
-        int yLocation = marsRover.getYLocation();
-        String direction = marsRover.getDirection();
+        int xLocation = client.getXLocation();
+        int yLocation = client.getYLocation();
+        String direction = client.getDirection();
 
         assertEquals(-1, xLocation);
         assertEquals(1, yLocation);
