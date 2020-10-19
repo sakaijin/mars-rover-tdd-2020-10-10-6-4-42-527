@@ -50,7 +50,7 @@ public class MarsRover {
                 turnRight();
                 break;
             default:
-                throw new CommandNotDefinedException("Command Not Defined.");
+                throw new CommandNotDefinedException();
         }
     }
 
@@ -85,18 +85,30 @@ public class MarsRover {
     }
 
     private void move() {
-        if (isNorth()) {
-            yLocation++;
+        if(inYAxis()){
+            if (isNorth()) {
+                yLocation++;
+            }
+            if (isSouth()){
+                yLocation--;
+            }
         }
-        if (isSouth()){
-            yLocation--;
+        if(inXAxis()){
+            if (isEast()){
+                xLocation++;
+            }
+            if (isWest()){
+                xLocation--;
+            }
         }
-        if (isEast()){
-            xLocation++;
-        }
-        if (isWest()){
-            xLocation--;
-        }
+    }
+
+    private boolean inXAxis() {
+        return isEast() || isWest();
+    }
+
+    private boolean inYAxis(){
+        return isNorth() || isSouth();
     }
 
     private boolean isNorth() {

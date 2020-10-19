@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-class DemoTest {
+class MarsRoverTest {
     @Test
     void should_x_0_y_1_N_when_executeCommand_M_given_x_0_y_0_N() throws CommandNotDefinedException {
         MarsRover marsRover = new MarsRover(0, 0, "N");
@@ -191,8 +191,7 @@ class DemoTest {
         MarsRover marsRover = new MarsRover(0, 0, "W");
         CommandSplitter commandsSplit = new CommandSplitter();
 
-        assertThrows(CommandNotDefinedException.class, () -> {
-            marsRover.executeCommand(commandsSplit.splitCommands("F"));});
+        assertThrows(CommandNotDefinedException.class, () -> marsRover.executeCommand(commandsSplit.splitCommands("F")));
     }
 
     @Test
