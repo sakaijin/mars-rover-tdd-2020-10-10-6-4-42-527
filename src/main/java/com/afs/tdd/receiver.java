@@ -2,25 +2,25 @@ package com.afs.tdd;
 
 public class receiver {
 
-    int xLocation;
-    int yLocation;
-    String direction;
+    private int xLocation;
+    private int yLocation;
+    private String direction;
 
-    public receiver(String direction) {
+    receiver(String direction) {
         this.direction = direction;
     }
 
-    public receiver(int xLocation, int yLocation, String direction) {
+    receiver(int xLocation, int yLocation, String direction) {
         this.xLocation = xLocation;
         this.yLocation = yLocation;
         this.direction = direction;
     }
 
-    public int getxLocation() {
+    int getxLocation() {
         return xLocation;
     }
 
-    public int getyLocation() {
+    int getyLocation() {
         return yLocation;
     }
 
@@ -28,39 +28,35 @@ public class receiver {
         return direction;
     }
 
-    public void setDirection(String direction) {
-        this.direction = direction;
+    void moveNorth(){
+        yLocation++;
     }
 
-    public int moveNorth(){
-        return yLocation++;
+    void moveSouth(){
+        yLocation--;
     }
 
-    public int moveSouth(){
-        return yLocation--;
+    void moveEast(){
+        xLocation++;
     }
 
-    public int moveEast(){
-        return xLocation++;
+    void moveWest(){
+        xLocation--;
     }
 
-    public int moveWest(){
-        return xLocation--;
-    }
-
-    public void turnWest(){
+    void turnWest(){
         direction = "W";
     }
 
-    public void turnEast(){
+    void turnEast(){
         direction = "E";
     }
 
-    public void turnSouth(){
+    void turnSouth(){
         direction = "S";
     }
 
-    public void turnNorth(){
+    void turnNorth(){
         direction = "N";
     }
 
