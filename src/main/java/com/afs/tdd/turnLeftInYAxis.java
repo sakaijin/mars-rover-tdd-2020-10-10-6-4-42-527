@@ -9,19 +9,28 @@ public class turnLeftInYAxis implements command{
     }
 
     @Override
-    public int move() {
-        return 0;
-    }
-
-    @Override
-    public String change() {
+    public void moveOrChangeDirection() {
         if (receiver.getDirection().equals("N")){
             receiver.turnWest();
-            return receiver.getDirection();
-        }
-        else {
+        }else{
             receiver.turnEast();
-            return receiver.getDirection();
         }
     }
+
+//    @Override
+//    public int move() {
+//        return 0;
+//    }
+//
+//    @Override
+//    public String change() {
+//        if (receiver.getDirection().equals("N")){
+//            receiver.turnWest();
+//            return receiver.getDirection();
+//        }
+//        else {
+//            receiver.turnEast();
+//            return receiver.getDirection();
+//        }
+//    }
 }

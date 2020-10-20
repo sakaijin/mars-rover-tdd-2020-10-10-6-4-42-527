@@ -5,20 +5,18 @@ import java.util.List;
 public class Client {
     private static final String NORTH = "N";
     private static final String SOUTH = "S";
-    private static final String EAST = "E";
-    private static final String WEST = "W";
     private static final String MOVE = "M";
     private static final String LEFT = "L";
     private static final String RIGHT = "R";
     private int xLocation;
     private int yLocation;
     private String direction;
-    private invoker invoker = new invoker();
 
     public Client(int xLocation, int yLocation, String direction) {
         this.xLocation = xLocation;
         this.yLocation = yLocation;
         this.direction = direction;
+
     }
 
     public int getXLocation() {
@@ -40,29 +38,36 @@ public class Client {
     }
 
     private void readSingleCommand(String command) throws CommandNotDefinedException {
+        receiver currentCoordinates = new receiver(xLocation, yLocation, direction);
         switch (command) {
             case MOVE:
                 if (direction.equals(NORTH) || direction.equals(SOUTH)){
-                    yLocation = invoker.executeCommand(new commandMoveInYAxis(new receiver(xLocation,yLocation,direction)));
+                    new commandMoveInYAxis(currentCoordinates).moveOrChangeDirection();
+                    this.yLocation = currentCoordinates.getyLocation();
                 }
                 else {
-                    xLocation = invoker.executeCommand(new commandMoveInXAxis(new receiver(xLocation, yLocation, direction)));
+                    new commandMoveInXAxis(currentCoordinates).moveOrChangeDirection();
+                    this.xLocation = currentCoordinates.getxLocation();
                 }
                 break;
             case LEFT:
                 if (direction.equals(NORTH) || direction.equals(SOUTH)){
-                    direction = invoker.changeDirection(new turnLeftInYAxis(new receiver(direction)));
+                    new turnLeftInYAxis(currentCoordinates).moveOrChangeDirection();
+                    this.direction = currentCoordinates.getDirection();
                 }
                 else {
-                    direction = invoker.changeDirection(new turnLeftInXAxis(new receiver(direction)));
+                    new turnLeftInXAxis(currentCoordinates).moveOrChangeDirection();
+                    this.direction = currentCoordinates.getDirection();
                 }
                 break;
             case RIGHT:
                 if (direction.equals(NORTH) || direction.equals(SOUTH)){
-                    direction = invoker.changeDirection(new turnRightInYAxis(new receiver(direction)));
+                    new turnRightInYAxis(currentCoordinates).moveOrChangeDirection();
+                    this.direction = currentCoordinates.getDirection();
                 }
                 else {
-                    direction = invoker.changeDirection(new turnRightInXAxis(new receiver(direction)));
+                    new turnRightInXAxis(currentCoordinates).moveOrChangeDirection();
+                    this.direction = currentCoordinates.getDirection();
                 }
                 break;
             default:

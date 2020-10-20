@@ -9,19 +9,28 @@ public class turnLeftInXAxis implements command{
     }
 
     @Override
-    public int move() {
-        return 0;
-    }
-
-    @Override
-    public String change() {
+    public void moveOrChangeDirection() {
         if (receiver.getDirection().equals("E")){
             receiver.turnNorth();
-            return receiver.getDirection();
-        }
-        else {
+        }else {
             receiver.turnSouth();
-            return receiver.getDirection();
         }
     }
+
+//    @Override
+//    public int move() {
+//        return 0;
+//    }
+//
+//    @Override
+//    public String change() {
+//        if (receiver.getDirection().equals("E")){
+//            receiver.turnNorth();
+//            return receiver.getDirection();
+//        }
+//        else {
+//            receiver.turnSouth();
+//            return receiver.getDirection();
+//        }
+//    }
 }
