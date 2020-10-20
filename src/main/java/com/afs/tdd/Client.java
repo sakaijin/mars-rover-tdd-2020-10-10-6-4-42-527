@@ -40,34 +40,17 @@ public class Client {
         receiver currentCoordinates = new receiver(xLocation, yLocation, direction);
         switch (command) {
             case MOVE:
-                if (direction.equals(NORTH) || direction.equals(SOUTH)){
-                    new commandMoveInYAxis(currentCoordinates).execute();
+                    new commandMove(currentCoordinates).execute();
                     this.yLocation = currentCoordinates.getYLocation();
-                }
-                else {
-                    new commandMoveInXAxis(currentCoordinates).execute();
                     this.xLocation = currentCoordinates.getXLocation();
-                }
                 break;
             case LEFT:
-                if (direction.equals(NORTH) || direction.equals(SOUTH)){
-                    new turnLeftInYAxis(currentCoordinates).execute();
+                    new turnLeft(currentCoordinates).execute();
                     this.direction = currentCoordinates.getDirection();
-                }
-                else {
-                    new turnLeftInXAxis(currentCoordinates).execute();
-                    this.direction = currentCoordinates.getDirection();
-                }
                 break;
             case RIGHT:
-                if (direction.equals(NORTH) || direction.equals(SOUTH)){
-                    new turnRightInYAxis(currentCoordinates).execute();
+                    new turnRight(currentCoordinates).execute();
                     this.direction = currentCoordinates.getDirection();
-                }
-                else {
-                    new turnRightInXAxis(currentCoordinates).execute();
-                    this.direction = currentCoordinates.getDirection();
-                }
                 break;
             default:
                 throw new CommandNotDefinedException();

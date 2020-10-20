@@ -1,6 +1,6 @@
 package com.afs.tdd;
 
-public class receiver {
+class receiver {
 
     private int xLocation;
     private int yLocation;
@@ -20,7 +20,7 @@ public class receiver {
         return yLocation;
     }
 
-    public String getDirection() {
+    String getDirection() {
         return direction;
     }
 
