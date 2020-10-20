@@ -16,21 +16,4 @@ public class turnLeftInXAxis implements command{
             receiver.turnSouth();
         }
     }
-
-//    @Override
-//    public int move() {
-//        return 0;
-//    }
-//
-//    @Override
-//    public String change() {
-//        if (receiver.getDirection().equals("E")){
-//            receiver.turnNorth();
-//            return receiver.getDirection();
-//        }
-//        else {
-//            receiver.turnSouth();
-//            return receiver.getDirection();
-//        }
-//    }
 }

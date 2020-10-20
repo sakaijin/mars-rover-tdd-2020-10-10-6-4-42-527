@@ -6,21 +6,17 @@ public class receiver {
     private int yLocation;
     private String direction;
 
-    receiver(String direction) {
-        this.direction = direction;
-    }
-
     receiver(int xLocation, int yLocation, String direction) {
         this.xLocation = xLocation;
         this.yLocation = yLocation;
         this.direction = direction;
     }
 
-    int getxLocation() {
+    int getXLocation() {
         return xLocation;
     }
 
-    int getyLocation() {
+    int getYLocation() {
         return yLocation;
     }
 
@@ -59,6 +55,4 @@ public class receiver {
     void turnNorth(){
         direction = "N";
     }
-
-
 }

@@ -16,7 +16,6 @@ public class Client {
         this.xLocation = xLocation;
         this.yLocation = yLocation;
         this.direction = direction;
-
     }
 
     public int getXLocation() {
@@ -43,11 +42,11 @@ public class Client {
             case MOVE:
                 if (direction.equals(NORTH) || direction.equals(SOUTH)){
                     new commandMoveInYAxis(currentCoordinates).moveOrChangeDirection();
-                    this.yLocation = currentCoordinates.getyLocation();
+                    this.yLocation = currentCoordinates.getYLocation();
                 }
                 else {
                     new commandMoveInXAxis(currentCoordinates).moveOrChangeDirection();
-                    this.xLocation = currentCoordinates.getxLocation();
+                    this.xLocation = currentCoordinates.getXLocation();
                 }
                 break;
             case LEFT:

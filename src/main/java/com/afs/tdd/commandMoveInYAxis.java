@@ -12,24 +12,8 @@ public class commandMoveInYAxis implements command {
     public void moveOrChangeDirection() {
         if (receiver.getDirection().equals("N")){
             receiver.moveNorth();
-        }
-        else{
+        }else{
             receiver.moveSouth();
         }
     }
-
-//    @Override
-//    public int move() {
-//        if (receiver.getDirection().equals("N")){
-//            receiver.moveNorth();
-//            return receiver.getyLocation();
-//        }
-//        receiver.moveSouth();
-//        return receiver.getyLocation();
-//    }
-//
-//    @Override
-//    public String change() {
-//        return null;
-//    }
 }
