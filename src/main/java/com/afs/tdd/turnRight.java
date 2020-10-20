@@ -1,6 +1,10 @@
 package com.afs.tdd;
 
 public class turnRight implements command {
+    private static final String NORTH = "N";
+    private static final String SOUTH = "S";
+    private static final String EAST = "E";
+    private static final String WEST = "W";
     private receiver receiver;
 
     turnRight(receiver receiver) {
@@ -10,16 +14,16 @@ public class turnRight implements command {
     @Override
     public void execute() {
         switch (receiver.getDirection()) {
-            case "S":
+            case SOUTH:
                 receiver.turnWest();
                 break;
-            case "N":
+            case NORTH:
                 receiver.turnEast();
                 break;
-            case "W":
+            case WEST:
                 receiver.turnNorth();
                 break;
-            case "E":
+            case EAST:
                 receiver.turnSouth();
                 break;
         }

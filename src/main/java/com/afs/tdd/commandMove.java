@@ -2,6 +2,10 @@ package com.afs.tdd;
 
 public class commandMove implements command {
 
+    private static final String NORTH = "N";
+    private static final String SOUTH = "S";
+    private static final String EAST = "E";
+    private static final String WEST = "W";
     private receiver receiver;
 
     commandMove(receiver receiver) {
@@ -11,16 +15,16 @@ public class commandMove implements command {
     @Override
     public void execute() {
         switch (receiver.getDirection()){
-            case "N":
+            case NORTH:
                 receiver.moveNorth();
                 break;
-            case "S":
+            case SOUTH:
                 receiver.moveSouth();
                 break;
-            case "E":
+            case EAST:
                 receiver.moveEast();
                 break;
-            case "W":
+            case WEST:
                 receiver.moveWest();
                 break;
         }

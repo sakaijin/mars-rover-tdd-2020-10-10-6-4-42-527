@@ -3,8 +3,6 @@ package com.afs.tdd;
 import java.util.List;
 
 public class Client {
-    private static final String NORTH = "N";
-    private static final String SOUTH = "S";
     private static final String MOVE = "M";
     private static final String LEFT = "L";
     private static final String RIGHT = "R";
