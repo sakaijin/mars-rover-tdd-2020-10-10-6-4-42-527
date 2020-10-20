@@ -9,7 +9,7 @@ public class turnLeftInYAxis implements command{
     }
 
     @Override
-    public void moveOrChangeDirection() {
+    public void execute() {
         if (receiver.getDirection().equals("N")){
             receiver.turnWest();
         }else{

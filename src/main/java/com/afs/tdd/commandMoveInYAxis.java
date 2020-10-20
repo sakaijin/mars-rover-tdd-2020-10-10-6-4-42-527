@@ -9,7 +9,7 @@ public class commandMoveInYAxis implements command {
     }
 
     @Override
-    public void moveOrChangeDirection() {
+    public void execute() {
         if (receiver.getDirection().equals("N")){
             receiver.moveNorth();
         }else{

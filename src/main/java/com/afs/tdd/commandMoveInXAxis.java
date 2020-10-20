@@ -9,7 +9,7 @@ public class commandMoveInXAxis implements command{
     }
 
     @Override
-    public void moveOrChangeDirection() {
+    public void execute() {
         if (receiver.getDirection().equals("E")){
             receiver.moveEast();
         }else{

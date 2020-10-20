@@ -41,31 +41,31 @@ public class Client {
         switch (command) {
             case MOVE:
                 if (direction.equals(NORTH) || direction.equals(SOUTH)){
-                    new commandMoveInYAxis(currentCoordinates).moveOrChangeDirection();
+                    new commandMoveInYAxis(currentCoordinates).execute();
                     this.yLocation = currentCoordinates.getYLocation();
                 }
                 else {
-                    new commandMoveInXAxis(currentCoordinates).moveOrChangeDirection();
+                    new commandMoveInXAxis(currentCoordinates).execute();
                     this.xLocation = currentCoordinates.getXLocation();
                 }
                 break;
             case LEFT:
                 if (direction.equals(NORTH) || direction.equals(SOUTH)){
-                    new turnLeftInYAxis(currentCoordinates).moveOrChangeDirection();
+                    new turnLeftInYAxis(currentCoordinates).execute();
                     this.direction = currentCoordinates.getDirection();
                 }
                 else {
-                    new turnLeftInXAxis(currentCoordinates).moveOrChangeDirection();
+                    new turnLeftInXAxis(currentCoordinates).execute();
                     this.direction = currentCoordinates.getDirection();
                 }
                 break;
             case RIGHT:
                 if (direction.equals(NORTH) || direction.equals(SOUTH)){
-                    new turnRightInYAxis(currentCoordinates).moveOrChangeDirection();
+                    new turnRightInYAxis(currentCoordinates).execute();
                     this.direction = currentCoordinates.getDirection();
                 }
                 else {
-                    new turnRightInXAxis(currentCoordinates).moveOrChangeDirection();
+                    new turnRightInXAxis(currentCoordinates).execute();
                     this.direction = currentCoordinates.getDirection();
                 }
                 break;

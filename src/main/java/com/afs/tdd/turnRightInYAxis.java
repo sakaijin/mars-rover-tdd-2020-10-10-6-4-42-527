@@ -8,7 +8,7 @@ public class turnRightInYAxis implements command {
     }
 
     @Override
-    public void moveOrChangeDirection() {
+    public void execute() {
         if (receiver.getDirection().equals("N")){
             receiver.turnEast();
         }else{
